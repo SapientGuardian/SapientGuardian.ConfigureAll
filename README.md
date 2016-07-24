@@ -9,7 +9,7 @@ ConfigureAll is a library to make using the Options configuration pattern easier
 
 ## How to use it
 
-1. Implement the IConfigurationObject interface on your configuration objects by adding a ConfigurationKey property indicating the name of the key in your configuration that maps to this object
+  1. Implement the IConfigurationObject interface on your configuration objects by adding a ConfigurationKey property indicating the name of the key in your configuration that maps to this object
 ```C#
 using SapientGuardian.ConfigureAll;
 
@@ -24,7 +24,7 @@ namespace ConfigureAllTests
     }
 }
 ```  
-2. Call ConfigureAll in your ConfigureServices method
+  2. Call ConfigureAll in your ConfigureServices method
 ```C#
  public IConfiguration Configuration { get; }
 
