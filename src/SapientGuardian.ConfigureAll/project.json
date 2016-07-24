@@ -1,0 +1,26 @@
+﻿{
+  "version": "1.0.0",
+  "description": "Library to make using the Options configuration pattern easier. Just implement IConfigurationObject and ConfigureAll!",
+  "authors": [ "SapientGuardian" ],
+  "buildOptions": {
+    "emitEntryPoint": false
+  },
+  "packOptions": {
+    "tags": [ "core", "coreclr", "netcore", "configuration", "options" ],
+    "projectUrl": "https://github.com/SapientGuardian/SapientGuardian.ConfigureAll",
+    "licenseUrl": "http://opensource.org/licenses/MIT"
+  },
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+    "Microsoft.Extensions.DependencyInjection": "1.0.0",
+    "System.Reflection.TypeExtensions": "4.1.0"
+  },
+
+  "frameworks": {
+    "netstandard1.1": {
+      "imports": "dnxcore50"
+    }
+  }
+}
