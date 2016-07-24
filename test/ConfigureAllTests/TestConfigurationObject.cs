@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConfigureAllTests
 {
-    public class TestConfigurationObject : IConfigurationObject
-    {
-        public string ConfigurationKey => "TestKey";
-
+    [ConfigurationObject("TestKey")]
+    public class TestConfigurationObject
+    {        
         public string TestValue { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace Microsoft.Extensions.Options
 
             var configurationObjectTypes = from type in assembly.GetTypes()
                                            let typeInfo = type.GetTypeInfo()
-                                           where typeof(IConfigurationObject).GetTypeInfo().IsAssignableFrom(typeInfo)
+                                           where typeInfo.GetCustomAttribute<ConfigurationObject>() != null
                                            && typeInfo.IsClass
                                            select type;
 
@@ -47,7 +47,7 @@ namespace Microsoft.Extensions.Options
                 var configurationOptionsInterfaceType = typeof(IConfigureOptions<>).MakeGenericType(configurationObjectTypeParameter);                
                 var configureFromConfigurationOptionsType = typeof(ConfigureFromConfigurationOptions<>).MakeGenericType(configurationObjectTypeParameter);
 
-                var configurationOptionsObject = (IConfigurationObject)Activator.CreateInstance(configurationObjectType);
+                var configurationOptionsObject = configurationObjectType.GetTypeInfo().GetCustomAttribute<ConfigurationObject>();
 
                 var configureFromConfigurationOptions = Activator.CreateInstance(configureFromConfigurationOptionsType, configuration.GetSection(configurationOptionsObject.ConfigurationKey));
 

@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED4B5916-7C5B-47ED-AADB-D5B42F5BFDF1}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SapientGuardian.ConfigureAll", "src\SapientGuardian.ConfigureAll\SapientGuardian.ConfigureAll.xproj", "{EE56ACA6-6750-4DE9-8E8E-468076B9EB6A}"

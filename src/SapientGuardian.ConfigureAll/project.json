@@ -1,6 +1,6 @@
 ﻿{
-  "version": "1.0.0",
-  "description": "Library to make using the Options configuration pattern easier. Just implement IConfigurationObject and ConfigureAll!",
+  "version": "2.0.0",
+  "description": "Library to make using the Options configuration pattern easier. Just add the ConfigurationObject attribute and ConfigureAll!",
   "authors": [ "SapientGuardian" ],
   "buildOptions": {
     "emitEntryPoint": false

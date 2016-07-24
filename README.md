@@ -5,21 +5,20 @@
 [![NuGet Package](https://img.shields.io/nuget/vpre/SapientGuardian.ConfigureAll.svg)](https://www.nuget.org/packages/SapientGuardian.ConfigureAll/)
 
 ## Description
-ConfigureAll is a library to make using the Options configuration pattern easier. Just implement IConfigurationObject and ConfigureAll!
+ConfigureAll is a library to make using the Options configuration pattern easier. Just add the ConfigurationObject attribute and ConfigureAll!
 
 ## How to use it
 
-1. Implement the IConfigurationObject interface on your configuration objects by adding a ConfigurationKey property indicating the name of the key in your configuration that maps to this object
+1. Add the ConfigurationObject attribute on your configuration objects indicating the name of the key in your configuration that maps to the object
     ```C#
     using SapientGuardian.ConfigureAll;
     
     
     namespace ConfigureAllTests
     {
+        [ConfigurationObject("TestKey")]
         public class TestConfigurationObject : IConfigurationObject
-        {
-            public string ConfigurationKey => "TestKey";
-    
+        {    
             public string TestValue { get; set; }
         }
     }
