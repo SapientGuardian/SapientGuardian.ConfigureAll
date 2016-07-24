@@ -51,7 +51,7 @@ install:
   # Restore dependencies
   - dotnet restore
 
-  - FrameworkLibsMoniker="netstandard1.1
+  - FrameworkLibsMoniker="netstandard1.1"
 
   # Build projects 
   - dotnet build -c $Configuration -f $FrameworkLibsMoniker ./src/SapientGuardian.ConfigureAll
