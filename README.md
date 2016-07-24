@@ -9,30 +9,32 @@ ConfigureAll is a library to make using the Options configuration pattern easier
 
 ## How to use it
 
-  1. Implement the IConfigurationObject interface on your configuration objects by adding a ConfigurationKey property indicating the name of the key in your configuration that maps to this object
-```C#
-using SapientGuardian.ConfigureAll;
-
-
-namespace ConfigureAllTests
-{
-    public class TestConfigurationObject : IConfigurationObject
+1. Implement the IConfigurationObject interface on your configuration objects by adding a ConfigurationKey property indicating the name of the key in your configuration that maps to this object
+    ```C#
+    using SapientGuardian.ConfigureAll;
+    
+    
+    namespace ConfigureAllTests
     {
-        public string ConfigurationKey => "TestKey";
-
-        public string TestValue { get; set; }
+        public class TestConfigurationObject : IConfigurationObject
+        {
+            public string ConfigurationKey => "TestKey";
+    
+            public string TestValue { get; set; }
+        }
     }
-}
-```  
-  2. Call ConfigureAll in your ConfigureServices method
-```C#
- public IConfiguration Configuration { get; }
+    ```  
+2. Call ConfigureAll in your ConfigureServices method
+    ```C#
+    using Microsoft.Extensions.Options;
 
- public void ConfigureServices(IServiceCollection services)
+    public IConfiguration Configuration { get; }
+
+    public void ConfigureServices(IServiceCollection services)
         {            
             services.AddOptions();
 
             services.ConfigureAll(this.GetType().GetTypeInfo().Assembly, Configuration);
         }
-```
-If your configuration objects are stored in a different assembly than the one containing your ConfigureServices method, be sure to specify that in the first parameter to ConfigureAll.
+    ```
+    If your configuration objects are stored in a different assembly than the one containing your ConfigureServices method, be sure to specify that in the first parameter to ConfigureAll.
