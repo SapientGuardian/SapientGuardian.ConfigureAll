@@ -17,7 +17,7 @@ ConfigureAll is a library to make using the Options configuration pattern easier
     namespace ConfigureAllTests
     {
         [ConfigurationObject("TestKey")]
-        public class TestConfigurationObject : IConfigurationObject
+        public class TestConfigurationObject
         {    
             public string TestValue { get; set; }
         }
