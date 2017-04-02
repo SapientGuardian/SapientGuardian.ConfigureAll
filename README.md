@@ -1,4 +1,4 @@
-#SapientGuardian.ConfigureAll
+# SapientGuardian.ConfigureAll
 
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/bxtp3m8vi50m1ba5?svg=true)](https://ci.appveyor.com/project/SapientGuardian/sapientguardian-configureall)<br />
 [![Linux/OSX Build Status](https://travis-ci.org/SapientGuardian/SapientGuardian.ConfigureAll.png)](https://travis-ci.org/SapientGuardian/SapientGuardian.ConfigureAll)<br />
